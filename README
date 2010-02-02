@@ -1,0 +1,10 @@
+This gem provides syslog-compatible logging for rails applications. It does so by monkey patching the rails logger.
+
+User ids are logged via a global variable, $user_id. You can use a before_filter in your application_controller to set it, eg:
+
+    before_filter { |controller| $user_id = controller.session[:user_id] || 0 }
+
+If you wish to change the format of the logged output, you can set LOGJAM_FORMATTER_CLASS to your own formatter after loading the gem. For a simple example, see LogjamLogger::SimpleFormatter in lib/logjam_logger/simple_formatter.rb.
+
+    config.gem 'logjam_logger'
+    LOGJAM_FORMATTER_CLASS = MyCustomFormatter
