@@ -1,4 +1,4 @@
-This gem provides syslog-compatible logging for rails applications. Just add it to your application and you are good to go -- no other changes are required. (But to really take your logging to the next level, also add time_bandits.)
+This gem provides syslog-compatible logging for rails applications. Just add it to your application and you are good to go -- no other changes are required. (But to really take your logging to the next level, also add [time_bandits](http://github.com/skaes/time_bandits).)
 
     config.gem 'logjam_logger'
 
@@ -10,3 +10,5 @@ If you wish to change the format of the logged output, you can set LOGJAM_FORMAT
 
     config.gem 'logjam_logger'
     LOGJAM_FORMATTER_CLASS = MyCustomFormatter
+
+logjam_logger was written to work well with [Logjam](http://github.com/alpinegizmo/logjam).
