@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{logjam_logger}
-  s.version = "1.1.0"
+  s.version = "1.1.1"
  
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Anderson"]
@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email = %q{david@alpinegizmo.com}
   s.files = [
      "LICENSE",
-     "README",
+     "README.markdown",
      "logjam_logger.gemspec",
      "lib/logjam_logger.rb",
      "lib/logjam_logger/buffer.rb",
