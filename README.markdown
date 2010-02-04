@@ -2,7 +2,7 @@ This gem provides syslog-compatible logging for rails applications. Just add it 
 
     config.gem 'logjam_logger'
 
-User ids are logged via a global hash, $user_id. You can use a before_filter in your application_controller to set it, eg:
+User ids are logged via a global hash, $user_ids. You can use a before_filter in your application_controller to set it, eg:
 
     before_filter { |controller| ($user_ids ||= {})[Thread.current] = controller.session[:user_id] || 0 }
 
