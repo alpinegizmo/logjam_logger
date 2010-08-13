@@ -11,7 +11,7 @@ module LogjamLogger
     #
     #    before_filter { |controller| ($user_ids ||= {})[Thread.current] = controller.session[:user_id] || 0 }
     def user_id
-      defined?($user_ids) ? " user[#{$user_ids[Thread.current]}]" : ''
+      defined?($user_ids) ? " user[#{$user_ids[Thread.current] || 0}]" : ''
     end
 
     # Note: If you are using FastCGI you may need to hard-code the hostname here instead of using Socket.gethostname
